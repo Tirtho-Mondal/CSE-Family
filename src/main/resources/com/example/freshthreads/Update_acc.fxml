@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.freshthreads.UpdateAcc">
+   <children>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" />
+            <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="620.8" prefWidth="1100.0" stylesheets="@loginSuccfull.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <AnchorPane fx:id="Faculty_register_form" prefHeight="600.0" prefWidth="849.6" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <Label layoutX="286.0" layoutY="14.0" prefHeight="31.0" prefWidth="346.0" styleClass="head-label" stylesheets="@new.css" text="Faculty Member Update Form" textFill="#2b1e1e" AnchorPane.leftAnchor="280.0" AnchorPane.rightAnchor="234.39999999999998">
+                           <font>
+                              <Font size="21.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="61.0" layoutY="100.0" prefHeight="27.0" prefWidth="102.0" text="Name:" />
+                        <Label layoutX="61.0" layoutY="151.0" prefHeight="27.0" prefWidth="122.0" text="Faculty User Id: " />
+                        <Label layoutX="65.0" layoutY="207.0" prefHeight="27.0" prefWidth="102.0" text="Email:" AnchorPane.leftAnchor="65.0" />
+                        <Label layoutX="65.0" layoutY="258.0" prefHeight="27.0" prefWidth="102.0" text="Password:" />
+                        <Label layoutX="65.0" layoutY="316.0" prefHeight="27.0" prefWidth="115.0" text="Confirm Password:" />
+                        <Button fx:id="faculty_register_insertImage" layoutX="701.0" layoutY="286.0" mnemonicParsing="false" onAction="#FacultyImageImportBtn" styleClass="btnPay" stylesheets="@loginSuccfull.css" text="Insert Image" AnchorPane.rightAnchor="70.99999999999996" />
+                        <TextField fx:id="faculty_register_name" layoutX="175.0" layoutY="100.0" prefHeight="26.0" prefWidth="450.0" promptText="Enter Name" AnchorPane.leftAnchor="175.0" AnchorPane.rightAnchor="235.39999999999998" />
+                        <TextField fx:id="faculty_register_userId" layoutX="180.0" layoutY="151.0" prefHeight="26.0" prefWidth="450.0" promptText="Enter Id" AnchorPane.leftAnchor="180.0" AnchorPane.rightAnchor="230.39999999999998" />
+                        <TextField fx:id="faculty_register_email" layoutX="180.0" layoutY="207.0" prefHeight="26.0" prefWidth="450.0" promptText="Enter email" AnchorPane.leftAnchor="180.0" AnchorPane.rightAnchor="230.39999999999998" />
+                        <PasswordField fx:id="faculty_register_password" layoutX="181.0" layoutY="258.0" prefHeight="26.0" prefWidth="450.0" promptText="Enter Password" AnchorPane.leftAnchor="181.0" AnchorPane.rightAnchor="229.39999999999998" />
+                        <AnchorPane prefHeight="156.0" prefWidth="145.0" stylesheets="@loginSuccfull.css" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="100.0">
+                           <styleClass>
+                              <String fx:value="white-from" />
+                              <String fx:value="shadow" />
+                           </styleClass>
+                           <children>
+                              <ImageView fx:id="faculty_register_imageView" fitHeight="150.0" fitWidth="136.0" layoutX="5.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0" />
+                           </children>
+                        </AnchorPane>
+                        <PasswordField fx:id="faculty_register_confirmPass" layoutX="181.0" layoutY="316.0" prefHeight="26.0" prefWidth="450.0" promptText="Enter password again" AnchorPane.leftAnchor="181.0" AnchorPane.rightAnchor="229.39999999999998" />
+                        <Button fx:id="faculty_register_confIrmBtn" layoutX="265.0" layoutY="392.0" mnemonicParsing="false" onAction="#faculty_Register_func" prefHeight="30.0" prefWidth="270.0" styleClass="btnPay" stylesheets="@loginSuccfull.css" text="Update" AnchorPane.leftAnchor="265.0" AnchorPane.rightAnchor="326.0" />
+                        <Button fx:id="faculty_up_back" layoutX="41.0" layoutY="17.0" mnemonicParsing="false" onAction="#back_menu" style="-fx-background-color: white;" text="◀Back" />
+                        <Button layoutX="555.0" layoutY="486.0" mnemonicParsing="false" onAction="#ShowInformation_faculty" prefHeight="26.0" prefWidth="286.0" text="Show Information" />
+                        <Button layoutX="153.0" layoutY="486.0" mnemonicParsing="false" onAction="#Delete_facluty" prefHeight="26.0" prefWidth="285.0" text="Delete" />
+                        <Label layoutX="209.0" layoutY="520.0" text="Pelase insert only falculty User Id" />
+                        <Label layoutX="628.0" layoutY="520.0" text="Pelase insert only falculty User Id" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="student_register_form" layoutX="10.0" layoutY="10.0" prefHeight="610.4" prefWidth="1100.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <Label layoutX="286.0" layoutY="14.0" prefHeight="31.0" prefWidth="346.0" styleClass="head-label" stylesheets="@new.css" text="Student Update Form" textFill="#2b1e1e" AnchorPane.leftAnchor="280.0" AnchorPane.rightAnchor="234.39999999999998">
+                           <font>
+                              <Font size="21.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="57.0" layoutY="91.0" prefHeight="27.0" prefWidth="102.0" text="Name:" />
+                        <Label layoutX="57.0" layoutY="142.0" prefHeight="27.0" prefWidth="122.0" text="Roll No:" />
+                        <Label layoutX="57.0" layoutY="254.0" prefHeight="27.0" prefWidth="102.0" text="Email:" AnchorPane.leftAnchor="57.0" />
+                        <Label layoutX="57.0" layoutY="305.0" prefHeight="27.0" prefWidth="102.0" text="Password:" />
+                        <Label layoutX="57.0" layoutY="363.0" prefHeight="27.0" prefWidth="115.0" text="Confirm Password:" />
+                        <Button fx:id="student_register_insertImageBtn" layoutX="701.0" layoutY="286.0" mnemonicParsing="false" onAction="#StudentImageImportBtn" styleClass="btnPay" stylesheets="@loginSuccfull.css" text="Insert Image" AnchorPane.rightAnchor="70.99999999999996" />
+                        <TextField fx:id="student_register_name" layoutX="173.0" layoutY="91.0" prefHeight="26.0" prefWidth="450.0" promptText="Enter Name" AnchorPane.leftAnchor="173.0" AnchorPane.rightAnchor="237.39999999999998" />
+                        <TextField fx:id="student_register_roll" layoutX="173.0" layoutY="142.0" prefHeight="26.0" prefWidth="450.0" promptText="Enter Roll" AnchorPane.leftAnchor="173.0" AnchorPane.rightAnchor="237.39999999999998" />
+                        <TextField fx:id="student_register_email" layoutX="173.0" layoutY="254.0" prefHeight="26.0" prefWidth="450.0" promptText="Enter email" AnchorPane.leftAnchor="173.0" AnchorPane.rightAnchor="237.39999999999998" />
+                        <PasswordField fx:id="student_register_password" layoutX="173.0" layoutY="305.0" prefHeight="26.0" prefWidth="450.0" promptText="Enter Password" AnchorPane.leftAnchor="173.0" AnchorPane.rightAnchor="237.39999999999998" />
+                        <AnchorPane prefHeight="156.0" prefWidth="145.0" stylesheets="@loginSuccfull.css" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="100.0">
+                           <styleClass>
+                              <String fx:value="white-from" />
+                              <String fx:value="shadow" />
+                           </styleClass>
+                           <children>
+                              <ImageView fx:id="student_register_imageView" fitHeight="150.0" fitWidth="136.0" layoutX="5.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0" />
+                           </children>
+                        </AnchorPane>
+                        <PasswordField fx:id="student_register_confirmPass" layoutX="173.0" layoutY="364.0" prefHeight="26.0" prefWidth="450.0" promptText="Enter password again" AnchorPane.leftAnchor="173.0" AnchorPane.rightAnchor="237.39999999999998" />
+                        <Button fx:id="student_register_confirmBtn" layoutX="260.0" layoutY="430.0" mnemonicParsing="false" onAction="#student_Register_func" prefHeight="30.0" prefWidth="270.0" styleClass="btnPay" stylesheets="@loginSuccfull.css" text="Confirm" AnchorPane.leftAnchor="260.0" AnchorPane.rightAnchor="331.0" />
+                        <Label layoutX="57.0" layoutY="205.0" text="Batch:" />
+                        <TextField fx:id="student_register_batch" layoutX="173.0" layoutY="201.0" prefHeight="26.0" prefWidth="450.0" promptText="Enter Batch (ex:2K20)" AnchorPane.leftAnchor="173.0" AnchorPane.rightAnchor="237.39999999999998" />
+                        <Button fx:id="faculty_up_back1" layoutX="57.0" layoutY="26.0" mnemonicParsing="false" onAction="#back_menu" style="-fx-background-color: white;" text="◀Back" />
+                        <Button layoutX="156.0" layoutY="514.0" mnemonicParsing="false" onAction="#Delete_Student" prefHeight="26.0" prefWidth="247.0" text="Delete" />
+                        <Button layoutX="593.0" layoutY="514.0" mnemonicParsing="false" onAction="#ShowInformation_student" prefHeight="26.0" prefWidth="247.0" text="Show information" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="Aliumni_register_form" layoutX="10.0" layoutY="10.0" prefHeight="610.4" prefWidth="1100.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <Label layoutX="286.0" layoutY="14.0" prefHeight="31.0" prefWidth="346.0" styleClass="head-label" stylesheets="@new.css" text="Alumni Update Form" textFill="#2b1e1e" AnchorPane.leftAnchor="280.0" AnchorPane.rightAnchor="234.39999999999998">
+                           <font>
+                              <Font size="21.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="61.0" layoutY="67.0" prefHeight="27.0" prefWidth="102.0" text="Name:" />
+                        <Label layoutX="61.0" layoutY="108.0" prefHeight="27.0" prefWidth="122.0" text="User Id: " />
+                        <Label layoutX="61.0" layoutY="350.0" prefHeight="27.0" prefWidth="102.0" text="Email:" AnchorPane.leftAnchor="61.0" />
+                        <Label layoutX="61.0" layoutY="393.0" prefHeight="27.0" prefWidth="102.0" text="Password:" />
+                        <Label layoutX="61.0" layoutY="435.0" prefHeight="27.0" prefWidth="115.0" text="Confirm Password:" />
+                        <Button fx:id="alumni_register_insertImageBtn" layoutX="701.0" layoutY="286.0" mnemonicParsing="false" onAction="#AlumniImageImportBtn" styleClass="btnPay" stylesheets="@loginSuccfull.css" text="Insert Image" AnchorPane.rightAnchor="70.99999999999996" />
+                        <TextField fx:id="alumni_register_name" layoutX="175.0" layoutY="67.0" prefHeight="26.0" prefWidth="696.0" promptText="Enter Name" AnchorPane.leftAnchor="180.0" />
+                        <TextField fx:id="alumni_register_userId" layoutX="180.0" layoutY="108.0" prefHeight="26.0" prefWidth="450.0" promptText="Enter Id" AnchorPane.leftAnchor="180.0" AnchorPane.rightAnchor="234.39999999999998" />
+                        <TextField fx:id="alumni_register_email" layoutX="180.0" layoutY="350.0" prefHeight="26.0" prefWidth="450.0" promptText="Enter email" AnchorPane.leftAnchor="180.0" AnchorPane.rightAnchor="234.39999999999998" />
+                        <PasswordField fx:id="alumni_register_password" layoutX="180.0" layoutY="393.0" prefHeight="26.0" prefWidth="450.0" promptText="Enter Password" AnchorPane.leftAnchor="180.0" AnchorPane.rightAnchor="234.39999999999998" />
+                        <AnchorPane prefHeight="156.0" prefWidth="145.0" stylesheets="@loginSuccfull.css" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="100.0">
+                           <styleClass>
+                              <String fx:value="white-from" />
+                              <String fx:value="shadow" />
+                           </styleClass>
+                           <children>
+                              <ImageView fx:id="alumni_register_imageView" fitHeight="150.0" fitWidth="136.0" layoutX="5.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0" />
+                           </children>
+                        </AnchorPane>
+                        <PasswordField fx:id="alumni_register_confPassword" layoutX="180.0" layoutY="436.0" prefHeight="26.0" prefWidth="450.0" promptText="Enter password again" AnchorPane.leftAnchor="180.0" AnchorPane.rightAnchor="234.39999999999998" />
+                        <Button fx:id="alumni_register_confirmBtn" layoutX="280.0" layoutY="487.0" mnemonicParsing="false" onAction="#alumni_Register_func" prefHeight="30.0" prefWidth="270.0" styleClass="btnPay" stylesheets="@loginSuccfull.css" text="Confirm" AnchorPane.leftAnchor="280.0" AnchorPane.rightAnchor="311.0" />
+                        <Label layoutX="61.0" layoutY="144.0" prefHeight="27.0" prefWidth="102.0" text="Batch:" />
+                        <Label layoutX="61.0" layoutY="180.0" prefHeight="27.0" prefWidth="122.0" text="Roll:" />
+                        <TextField fx:id="alumni_register_batch" layoutX="180.0" layoutY="144.0" prefHeight="26.0" prefWidth="450.0" promptText="Enter Batch(2K20)" AnchorPane.leftAnchor="180.0" AnchorPane.rightAnchor="234.39999999999998" />
+                        <TextField fx:id="alumni_register_roll" layoutX="180.0" layoutY="180.0" prefHeight="26.0" prefWidth="450.0" promptText="Enter Roll(2007117)" AnchorPane.leftAnchor="180.0" AnchorPane.rightAnchor="234.39999999999998" />
+                        <Label layoutX="61.0" layoutY="221.0" prefHeight="27.0" prefWidth="102.0" text="Country:" />
+                        <Label layoutX="61.0" layoutY="260.0" prefHeight="27.0" prefWidth="122.0" text="Job:" />
+                        <TextField fx:id="alumni_register_country" layoutX="180.0" layoutY="221.0" prefHeight="26.0" prefWidth="450.0" promptText="Enter Country" AnchorPane.leftAnchor="180.0" AnchorPane.rightAnchor="234.39999999999998" />
+                        <TextField fx:id="alumni_register_jobName" layoutX="180.0" layoutY="260.0" prefHeight="26.0" prefWidth="450.0" promptText="Enter job name" AnchorPane.leftAnchor="180.0" AnchorPane.rightAnchor="234.39999999999998" />
+                        <Label layoutX="61.0" layoutY="305.0" prefHeight="27.0" prefWidth="122.0" text="Post:" />
+                        <TextField fx:id="alumni_register_jobPost" layoutX="180.0" layoutY="305.0" prefHeight="26.0" prefWidth="450.0" promptText="Enter jobs post" AnchorPane.leftAnchor="180.0" AnchorPane.rightAnchor="234.39999999999998" />
+                        <Button fx:id="faculty_up_back2" layoutX="30.0" layoutY="17.0" mnemonicParsing="false" onAction="#back_menu" style="-fx-background-color: white;" text="◀Back" />
+                        <Button layoutX="183.0" layoutY="542.0" mnemonicParsing="false" onAction="#Delete_Alumni" prefHeight="26.0" prefWidth="255.0" text="Delete " />
+                        <Button layoutX="602.0" layoutY="542.0" mnemonicParsing="false" onAction="#ShowInformation_Alumni" prefHeight="26.0" prefWidth="255.0" text="Show Information" />
+                        <Label layoutX="271.0" layoutY="570.0" text="Insert only Roll" />
+                        <Label layoutX="690.0" layoutY="570.0" text="Insert only Roll" />
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="update_form" layoutX="10.0" layoutY="10.0" prefHeight="600.0" prefWidth="1100.0">
+               <children>
+                  <Button layoutX="117.0" layoutY="23.0" mnemonicParsing="false" onAction="#faclty_update_btn" prefHeight="141.0" prefWidth="819.0" stylesheets="@loginSuccfull.css" text="Faculty Update" AnchorPane.leftAnchor="117.0" AnchorPane.rightAnchor="117.0">
+                     <styleClass>
+                        <String fx:value="gradient" />
+                        <String fx:value="radius" />
+                        <String fx:value="btnPay" />
+                        <String fx:value="shadow" />
+                     </styleClass>
+                  </Button>
+                  <Button layoutX="117.0" layoutY="202.0" mnemonicParsing="false" onAction="#alumni_update_btn" prefHeight="142.0" prefWidth="866.0" stylesheets="@loginSuccfull.css" text="Alumni Update" AnchorPane.leftAnchor="117.0" AnchorPane.rightAnchor="117.0">
+                     <styleClass>
+                        <String fx:value="gradient" />
+                        <String fx:value="radius" />
+                        <String fx:value="btnPay" />
+                        <String fx:value="shadow" />
+                     </styleClass>
+                  </Button>
+                  <Button layoutX="117.0" layoutY="382.0" mnemonicParsing="false" onAction="#student_update_btn" prefHeight="142.0" prefWidth="866.0" stylesheets="@loginSuccfull.css" text="Stident's Update" AnchorPane.leftAnchor="117.0" AnchorPane.rightAnchor="117.0">
+                     <styleClass>
+                        <String fx:value="gradient" />
+                        <String fx:value="radius" />
+                        <String fx:value="btnPay" />
+                        <String fx:value="shadow" />
+                     </styleClass>
+                  </Button>
+                  <Button fx:id="return_btn" layoutX="46.0" layoutY="547.0" mnemonicParsing="false" onAction="#Back" text="Return" />
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

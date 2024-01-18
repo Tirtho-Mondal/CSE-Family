@@ -1,0 +1,39 @@
+
+
+.card
+{
+    -fx-background-color: #fff;
+    -fx-background-radius: 6px;
+     -fx-cursor: hand;
+
+}
+
+.clothName
+{
+-fx-text-fill:Linear-gradient(to bottom right,#285996,#4b83c7);
+
+}
+.card:hover
+{
+ -fx-effect: dropshadow(three-pass-box,rgba(0,0,0,0.5),8,0,0,0);
+}
+
+.shadow
+{
+    -fx-effect: dropshadow(three-pass-box,rgba(0,0,0,0.5),4,0,0,0);
+}
+
+.btn
+{
+    -fx-background-color: Linear-gradient(to bottom right,#285996,#4b83c7);
+    -fx-background-radius: 5px;
+    -fx-cursor: hand;
+    -fx-text-fill:#fff;
+    -fx-font-family: Arial;
+}
+.btn:hover
+{
+    -fx-background-color: Linear-gradient(to bottom right,#33cc42,#b96838);
+    -fx-text-fill: #000;
+}
+

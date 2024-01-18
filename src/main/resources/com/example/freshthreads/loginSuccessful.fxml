@@ -1,0 +1,1044 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.freshthreads.LoginSuccessful">
+   <children>
+      <AnchorPane fx:id="main_form" prefHeight="200.0" prefWidth="200.0" StackPane.alignment="CENTER">
+         <children>
+            <BorderPane prefHeight="600.0" prefWidth="1100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <left>
+                  <AnchorPane prefHeight="620.0" prefWidth="262.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <AnchorPane layoutX="9.0" prefHeight="620.0" prefWidth="241.0" stylesheets="@loginSuccfull.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <AnchorPane layoutX="25.0" layoutY="14.0" prefHeight="80.0" prefWidth="250.0" stylesheets="@loginSuccfull.css" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <children>
+                                    <Label layoutX="27.0" layoutY="16.0" text="CSE  Family" textAlignment="CENTER" textFill="WHITE">
+                                       <font>
+                                          <Font name="Bell MT" size="38.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                                 <styleClass>
+                                    <String fx:value="header" />
+                                    <String fx:value="gradient" />
+                                    <String fx:value="top-card" />
+                                 </styleClass>
+                              </AnchorPane>
+                              <Label layoutX="28.0" layoutY="95.0" prefHeight="18.0" prefWidth="77.0">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="username" layoutX="126.0" layoutY="95.0" prefHeight="18.0" prefWidth="77.0" AnchorPane.leftAnchor="126.0" AnchorPane.rightAnchor="46.80000000000001" AnchorPane.topAnchor="95.0">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Label>
+                              <Button fx:id="logout_btn" layoutX="5.0" layoutY="558.0" mnemonicParsing="false" onAction="#logout" prefHeight="38.0" prefWidth="78.0" styleClass="logout-btn" stylesheets="@loginSuccfull.css" text=" ◎Log Out" AnchorPane.bottomAnchor="3.6000000000000227" />
+                              <Button fx:id="order_btn" layoutX="12.0" layoutY="279.0" mnemonicParsing="false" onAction="#switchFrom" prefHeight="74.0" prefWidth="237.0" style="-fx-background-color: white;" styleClass="nav-btn" stylesheets="@loginSuccfull.css" text="            " AnchorPane.leftAnchor="12.0" AnchorPane.rightAnchor="13.0" AnchorPane.topAnchor="279.0">
+                                 <font>
+                                    <Font name="Dubai Regular" size="16.0" />
+                                 </font>
+                                 <graphic>
+                                    <ImageView fitHeight="66.0" fitWidth="127.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../image/student.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                              <Button fx:id="customer_btn" layoutX="12.0" layoutY="460.0" mnemonicParsing="false" onAction="#switchFrom" prefHeight="77.0" prefWidth="228.0" styleClass="dash-btn" stylesheets="@loginSuccfull.css" text="Alumni                   " AnchorPane.leftAnchor="12.0" AnchorPane.rightAnchor="13.0" AnchorPane.topAnchor="460.0">
+                                 <font>
+                                    <Font name="Corbel" size="16.0" />
+                                 </font>
+                                 <graphic>
+                                    <ImageView fitHeight="64.0" fitWidth="78.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../image/alumni.jpg" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                              <Button fx:id="service_btn" layoutX="168.0" layoutY="578.0" mnemonicParsing="false" onAction="#switchFrom" prefHeight="32.0" prefWidth="77.0" stylesheets="@loginSuccfull.css" text="Admin" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="168.0" AnchorPane.rightAnchor="9.0">
+                                 <font>
+                                    <Font name="Dubai Regular" size="16.0" />
+                                 </font>
+                                 <styleClass>
+                                    <String fx:value="nav-btn" />
+                                    <String fx:value="shadow" />
+                                    <String fx:value="radius" />
+                                 </styleClass>
+                              </Button>
+                              <Button fx:id="faculty_btn" layoutX="12.0" layoutY="186.0" mnemonicParsing="false" onAction="#switchFrom" prefHeight="74.0" prefWidth="237.0" styleClass="dash-btn" stylesheets="@loginSuccfull.css" text="Faculty Members" AnchorPane.leftAnchor="12.0" AnchorPane.rightAnchor="13.0" AnchorPane.topAnchor="186.0">
+                                 <font>
+                                    <Font name="Corbel" size="15.0" />
+                                 </font>
+                                 <graphic>
+                                    <ImageView fitHeight="75.0" fitWidth="85.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../image/fcac.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                              <Button fx:id="courses_btn" layoutX="12.0" layoutY="367.0" mnemonicParsing="false" onAction="#cousesBtn" prefHeight="78.0" prefWidth="228.0" styleClass="dash-btn" stylesheets="@loginSuccfull.css" text="Courses              " AnchorPane.leftAnchor="12.0" AnchorPane.rightAnchor="13.0" AnchorPane.topAnchor="367.0">
+                                 <font>
+                                    <Font name="Corbel" size="16.0" />
+                                 </font>
+                                 <graphic>
+                                    <ImageView fitHeight="55.0" fitWidth="76.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../image/course.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                              <Button fx:id="dashboard_btn" layoutX="12.0" layoutY="106.0" mnemonicParsing="false" onAction="#switchFrom" prefHeight="70.0" prefWidth="228.0" styleClass="dash-btn" stylesheets="@loginSuccfull.css" text="Dashboards                " AnchorPane.leftAnchor="12.0" AnchorPane.rightAnchor="13.0" AnchorPane.topAnchor="106.0">
+                                 <font>
+                                    <Font name="Corbel" size="16.0" />
+                                 </font>
+                                 <graphic>
+                                    <ImageView fitHeight="61.0" fitWidth="74.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../image/dashboard.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                           </children>
+                           <styleClass>
+                              <String fx:value="nav" />
+                              <String fx:value="radius" />
+                              <String fx:value="white-from" />
+                              <String fx:value="top-card" />
+                           </styleClass>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+               </left>
+               <center>
+                  <AnchorPane fx:id="order_from" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <AnchorPane fx:id="all_registration_form" focusTraversable="true" layoutX="10.0" layoutY="10.0" prefHeight="600.0" prefWidth="849.6" stylesheets="@cardDesign.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                        <AnchorPane prefHeight="600.0" prefWidth="849.6" stylesheets="@loginSuccfull.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <AnchorPane fx:id="Faculty_register_form" prefHeight="600.0" prefWidth="849.6" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <children>
+                                    <Label layoutX="236.0" layoutY="79.0" prefHeight="31.0" prefWidth="366.0" styleClass="head-label" stylesheets="@new.css" text="Faculty Member Registration Form" textFill="#2b1e1e" AnchorPane.leftAnchor="236.0" AnchorPane.rightAnchor="236.0">
+                                       <font>
+                                          <Font size="21.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="70.0" layoutY="190.0" prefHeight="27.0" prefWidth="102.0" text="Name:" />
+                                    <Label layoutX="70.0" layoutY="241.0" prefHeight="27.0" prefWidth="122.0" text="Faculty User Id: " />
+                                    <Label layoutX="74.0" layoutY="297.0" prefHeight="27.0" prefWidth="102.0" text="Email:" AnchorPane.leftAnchor="74.0" />
+                                    <Label layoutX="74.0" layoutY="348.0" prefHeight="27.0" prefWidth="102.0" text="Password:" />
+                                    <Label layoutX="74.0" layoutY="406.0" prefHeight="27.0" prefWidth="115.0" text="Confirm Password:" />
+                                    <Button fx:id="faculty_register_insertImage" layoutX="693.0" layoutY="330.0" mnemonicParsing="false" onAction="#FacultyImageImportBtn" styleClass="btnPay" stylesheets="@loginSuccfull.css" text="Insert Image" AnchorPane.rightAnchor="75.0" />
+                                    <TextField fx:id="faculty_register_name" layoutX="184.0" layoutY="190.0" prefHeight="26.0" prefWidth="450.0" promptText="Enter Name" AnchorPane.leftAnchor="184.0" AnchorPane.rightAnchor="226.39999999999998" />
+                                    <TextField fx:id="faculty_register_userId" layoutX="189.0" layoutY="241.0" prefHeight="26.0" prefWidth="450.0" promptText="Enter Id" AnchorPane.leftAnchor="189.0" AnchorPane.rightAnchor="221.39999999999998" />
+                                    <TextField fx:id="faculty_register_email" layoutX="189.0" layoutY="297.0" prefHeight="26.0" prefWidth="450.0" promptText="Enter email" AnchorPane.leftAnchor="189.0" AnchorPane.rightAnchor="221.39999999999998" />
+                                    <PasswordField fx:id="faculty_register_password" layoutX="190.0" layoutY="348.0" prefHeight="26.0" prefWidth="450.0" promptText="Enter Password" AnchorPane.leftAnchor="190.0" AnchorPane.rightAnchor="220.39999999999998" />
+                                    <AnchorPane layoutX="660.0" layoutY="144.0" prefHeight="158.0" prefWidth="157.0" stylesheets="@loginSuccfull.css" AnchorPane.rightAnchor="54.0" AnchorPane.topAnchor="144.0">
+                                       <styleClass>
+                                          <String fx:value="white-from" />
+                                          <String fx:value="shadow" />
+                                       </styleClass>
+                                       <children>
+                                          <ImageView fx:id="faculty_register_imageView" fitHeight="156.0" fitWidth="159.0" layoutX="2.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="2.0" AnchorPane.rightAnchor="-3.0" AnchorPane.topAnchor="2.0">
+                                             <image>
+                                                <Image url="@../image/admin_acc.png" />
+                                             </image></ImageView>
+                                       </children>
+                                    </AnchorPane>
+                                    <PasswordField fx:id="faculty_register_confirmPass" layoutX="190.0" layoutY="407.0" prefHeight="26.0" prefWidth="450.0" promptText="Enter password again" AnchorPane.leftAnchor="190.0" AnchorPane.rightAnchor="220.39999999999998" />
+                                    <Button fx:id="faculty_register_confIrmBtn" layoutX="277.0" layoutY="473.0" mnemonicParsing="false" onAction="#faculty_Register_func" prefHeight="30.0" prefWidth="270.0" styleClass="btnPay" stylesheets="@loginSuccfull.css" text="Confirm" AnchorPane.leftAnchor="277.0" AnchorPane.rightAnchor="314.0" />
+                                    <Button layoutX="20.0" layoutY="25.0" mnemonicParsing="false" onAction="#back_faculty" style="-fx-background-color: white;">
+                                       <graphic>
+                                          <ImageView fitHeight="39.0" fitWidth="82.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../image/back.jpeg" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </Button>
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane fx:id="student_register_form" layoutX="10.0" layoutY="10.0" prefHeight="600.0" prefWidth="849.6" style="-fx-background-color: white;" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <children>
+                                    <Label layoutX="272.0" layoutY="41.0" prefHeight="31.0" prefWidth="346.0" styleClass="head-label" stylesheets="@new.css" text="Student Registration Form" textFill="#2b1e1e" AnchorPane.leftAnchor="272.0" AnchorPane.rightAnchor="242.39999999999998">
+                                       <font>
+                                          <Font size="21.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="61.0" layoutY="125.0" prefHeight="27.0" prefWidth="102.0" text="Name:" />
+                                    <Label layoutX="61.0" layoutY="176.0" prefHeight="27.0" prefWidth="122.0" text="Roll No:" />
+                                    <Label layoutX="61.0" layoutY="288.0" prefHeight="27.0" prefWidth="102.0" text="Email:" AnchorPane.leftAnchor="61.0" />
+                                    <Label layoutX="61.0" layoutY="339.0" prefHeight="27.0" prefWidth="102.0" text="Password:" />
+                                    <Label layoutX="61.0" layoutY="397.0" prefHeight="27.0" prefWidth="115.0" text="Confirm Password:" />
+                                    <Button fx:id="student_register_insertImageBtn" layoutX="701.0" layoutY="286.0" mnemonicParsing="false" onAction="#StudentImageImportBtn" styleClass="btnPay" stylesheets="@loginSuccfull.css" text="Insert Image" AnchorPane.rightAnchor="70.99999999999996" />
+                                    <TextField fx:id="student_register_name" layoutX="175.0" layoutY="125.0" prefHeight="26.0" prefWidth="450.0" promptText="Enter Name" AnchorPane.leftAnchor="177.0" AnchorPane.rightAnchor="233.39999999999998" />
+                                    <TextField fx:id="student_register_roll" layoutX="180.0" layoutY="176.0" prefHeight="26.0" prefWidth="450.0" promptText="Enter Roll" AnchorPane.leftAnchor="177.0" AnchorPane.rightAnchor="233.39999999999998" />
+                                    <TextField fx:id="student_register_email" layoutX="176.0" layoutY="288.0" prefHeight="26.0" prefWidth="450.0" promptText="Enter email" AnchorPane.leftAnchor="177.0" AnchorPane.rightAnchor="233.39999999999998" />
+                                    <PasswordField fx:id="student_register_password" layoutX="177.0" layoutY="339.0" prefHeight="26.0" prefWidth="450.0" promptText="Enter Password" AnchorPane.leftAnchor="177.0" AnchorPane.rightAnchor="233.39999999999998" />
+                                    <AnchorPane layoutX="652.0" layoutY="120.0" prefHeight="105.0" prefWidth="146.0" stylesheets="@loginSuccfull.css" AnchorPane.rightAnchor="51.200000000000045" AnchorPane.topAnchor="120.0">
+                                       <styleClass>
+                                          <String fx:value="white-from" />
+                                          <String fx:value="shadow" />
+                                       </styleClass>
+                                       <children>
+                                          <ImageView fx:id="student_register_imageView" fitHeight="152.0" fitWidth="136.0" layoutX="5.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="-1.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0">
+                                             <image>
+                                                <Image url="@../image/images%20(3).jpeg" />
+                                             </image></ImageView>
+                                       </children>
+                                    </AnchorPane>
+                                    <PasswordField fx:id="student_register_confirmPass" layoutX="177.0" layoutY="398.0" prefHeight="26.0" prefWidth="450.0" promptText="Enter password again" AnchorPane.leftAnchor="177.0" AnchorPane.rightAnchor="233.39999999999998" />
+                                    <Button fx:id="student_register_confirmBtn" layoutX="264.0" layoutY="464.0" mnemonicParsing="false" onAction="#student_Register_func" prefHeight="30.0" prefWidth="270.0" styleClass="btnPay" stylesheets="@loginSuccfull.css" text="Confirm" AnchorPane.leftAnchor="264.0" AnchorPane.rightAnchor="327.0" />
+                                    <Label layoutX="61.0" layoutY="239.0" text="Batch:" />
+                                    <TextField fx:id="student_register_batch" layoutX="174.0" layoutY="235.0" prefHeight="26.0" prefWidth="450.0" promptText="Enter Batch (ex:2K20)" AnchorPane.leftAnchor="177.0" AnchorPane.rightAnchor="233.39999999999998" />
+                                    <Button layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#back_student" style="-fx-background-color: white;">
+                                       <graphic>
+                                          <ImageView fitHeight="39.0" fitWidth="82.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../image/back.jpeg" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </Button>
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane fx:id="Aliumni_register_form" layoutX="10.0" layoutY="10.0" prefHeight="600.0" prefWidth="849.6" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <children>
+                                    <Label layoutX="286.0" layoutY="14.0" prefHeight="31.0" prefWidth="346.0" styleClass="head-label" stylesheets="@new.css" text="Alumni Registration Form" textFill="#2b1e1e" AnchorPane.leftAnchor="280.0" AnchorPane.rightAnchor="234.39999999999998">
+                                       <font>
+                                          <Font size="21.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="61.0" layoutY="66.0" prefHeight="27.0" prefWidth="102.0" text="Name:" />
+                                    <Label layoutX="61.0" layoutY="118.0" prefHeight="27.0" prefWidth="122.0" text="User Id: " />
+                                    <Label layoutX="61.0" layoutY="379.0" prefHeight="27.0" prefWidth="102.0" text="Email:" AnchorPane.leftAnchor="61.0" />
+                                    <Label layoutX="61.0" layoutY="430.0" prefHeight="27.0" prefWidth="102.0" text="Password:" />
+                                    <Label layoutX="61.0" layoutY="488.0" prefHeight="27.0" prefWidth="115.0" text="Confirm Password:" />
+                                    <Button fx:id="alumni_register_insertImageBtn" layoutX="701.0" layoutY="286.0" mnemonicParsing="false" onAction="#AlumniImageImportBtn" styleClass="btnPay" stylesheets="@loginSuccfull.css" text="Insert Image" AnchorPane.rightAnchor="70.99999999999996" />
+                                    <TextField fx:id="alumni_register_name" layoutX="175.0" layoutY="67.0" prefHeight="26.0" prefWidth="425.0" promptText="Enter Name" AnchorPane.leftAnchor="180.0" />
+                                    <TextField fx:id="alumni_register_userId" layoutX="180.0" layoutY="118.0" prefHeight="26.0" prefWidth="450.0" promptText="Enter Id" AnchorPane.leftAnchor="180.0" AnchorPane.rightAnchor="234.39999999999998" />
+                                    <TextField fx:id="alumni_register_email" layoutX="176.0" layoutY="379.0" prefHeight="26.0" prefWidth="450.0" promptText="Enter email" AnchorPane.leftAnchor="180.0" AnchorPane.rightAnchor="234.39999999999998" />
+                                    <PasswordField fx:id="alumni_register_password" layoutX="177.0" layoutY="430.0" prefHeight="26.0" prefWidth="450.0" promptText="Enter Password" AnchorPane.leftAnchor="180.0" AnchorPane.rightAnchor="234.39999999999998" />
+                                    <AnchorPane prefHeight="156.0" prefWidth="145.0" stylesheets="@loginSuccfull.css" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="100.0">
+                                       <styleClass>
+                                          <String fx:value="white-from" />
+                                          <String fx:value="shadow" />
+                                       </styleClass>
+                                       <children>
+                                          <ImageView fx:id="alumni_register_imageView" fitHeight="150.0" fitWidth="136.0" layoutX="5.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="15.574470520019531" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.400000000000006" AnchorPane.topAnchor="16.0">
+                                             <image>
+                                                <Image url="@../image/download%20(1).png" />
+                                             </image></ImageView>
+                                       </children>
+                                    </AnchorPane>
+                                    <PasswordField fx:id="alumni_register_confPassword" layoutX="177.0" layoutY="489.0" prefHeight="26.0" prefWidth="450.0" promptText="Enter password again" AnchorPane.leftAnchor="180.0" AnchorPane.rightAnchor="234.39999999999998" />
+                                    <Button fx:id="alumni_register_confirmBtn" layoutX="264.0" layoutY="555.0" mnemonicParsing="false" onAction="#alumni_Register_func" prefHeight="30.0" prefWidth="270.0" styleClass="btnPay" stylesheets="@loginSuccfull.css" text="Confirm" AnchorPane.leftAnchor="264.0" AnchorPane.rightAnchor="327.0" />
+                                    <Label layoutX="61.0" layoutY="158.0" prefHeight="27.0" prefWidth="102.0" text="Batch:" />
+                                    <Label layoutX="61.0" layoutY="209.0" prefHeight="27.0" prefWidth="122.0" text="Roll:" />
+                                    <TextField fx:id="alumni_register_batch" layoutX="175.0" layoutY="158.0" prefHeight="26.0" prefWidth="450.0" promptText="Enter Batch(2K20)" AnchorPane.leftAnchor="180.0" AnchorPane.rightAnchor="234.39999999999998" />
+                                    <TextField fx:id="alumni_register_roll" layoutX="180.0" layoutY="209.0" prefHeight="26.0" prefWidth="450.0" promptText="Enter Roll(2007117)" AnchorPane.leftAnchor="180.0" AnchorPane.rightAnchor="234.39999999999998" />
+                                    <Label layoutX="61.0" layoutY="244.0" prefHeight="27.0" prefWidth="102.0" text="Country:" />
+                                    <Label layoutX="61.0" layoutY="295.0" prefHeight="27.0" prefWidth="122.0" text="Job:" />
+                                    <TextField fx:id="alumni_register_country" layoutX="175.0" layoutY="244.0" prefHeight="26.0" prefWidth="450.0" promptText="Enter Country" AnchorPane.leftAnchor="180.0" AnchorPane.rightAnchor="234.39999999999998" />
+                                    <TextField fx:id="alumni_register_jobName" layoutX="180.0" layoutY="295.0" prefHeight="26.0" prefWidth="450.0" promptText="Enter job name" AnchorPane.leftAnchor="180.0" AnchorPane.rightAnchor="234.39999999999998" />
+                                    <Label layoutX="61.0" layoutY="333.0" prefHeight="27.0" prefWidth="122.0" text="Post:" />
+                                    <TextField fx:id="alumni_register_jobPost" layoutX="180.0" layoutY="333.0" prefHeight="26.0" prefWidth="450.0" promptText="Enter jobs post" AnchorPane.leftAnchor="180.0" AnchorPane.rightAnchor="234.39999999999998" />
+                                    <Button layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#back_alumni" style="-fx-background-color: white;">
+                                       <graphic>
+                                          <ImageView fitHeight="39.0" fitWidth="82.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../image/back.jpeg" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </Button>
+                                 </children>
+                              </AnchorPane>
+                           </children></AnchorPane>
+                        <AnchorPane fx:id="order_form" prefHeight="600.0" prefWidth="849.6" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <AnchorPane layoutX="69.0" layoutY="73.0" prefHeight="580.0" prefWidth="490.0" stylesheets="@loginSuccfull.css" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+                                 <styleClass>
+                                    <String fx:value="white-from" />
+                                    <String fx:value="shadow" />
+                                    <String fx:value="radius" />
+                                 </styleClass>
+                                 <children>
+                                    <AnchorPane layoutX="14.0" prefHeight="67.0" prefWidth="464.0" styleClass="top-card" stylesheets="@loginSuccfull.css" AnchorPane.leftAnchor="3.0" AnchorPane.rightAnchor="3.0" AnchorPane.topAnchor="3.0">
+                                       <children>
+                                          <Label layoutX="331.0" layoutY="16.0" prefHeight="34.0" prefWidth="188.0" text="Current Students" textFill="WHITE" AnchorPane.leftAnchor="331.0" AnchorPane.rightAnchor="293.0" AnchorPane.topAnchor="16.0">
+                                             <font>
+                                                <Font size="23.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </AnchorPane>
+                                    <ScrollPane fx:id="order_scrollPane" layoutX="2.0" layoutY="73.0" prefHeight="504.0" prefWidth="463.0" styleClass="white-from" stylesheets="@loginSuccfull.css" AnchorPane.bottomAnchor="3.0" AnchorPane.leftAnchor="2.0" AnchorPane.rightAnchor="15.599999999999966" AnchorPane.topAnchor="73.0">
+                                       <content>
+                                          <GridPane fx:id="order_gridPane" prefHeight="32.0" prefWidth="100.0">
+                                            <columnConstraints>
+                                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                            </columnConstraints>
+                                          </GridPane>
+                                       </content></ScrollPane>
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane layoutX="531.0" layoutY="28.0" prefHeight="580.0" prefWidth="338.0" stylesheets="@loginSuccfull.css" visible="false" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+                                 <styleClass>
+                                    <String fx:value="shadow" />
+                                    <String fx:value="radius" />
+                                    <String fx:value="white-from" />
+                                 </styleClass>
+                                 <children>
+                                    <TableView fx:id="order_tableView" layoutX="14.0" layoutY="14.0" onMouseClicked="#orderSelectOrder" prefHeight="312.0" prefWidth="318.0" style="-fx-background-color: white;" stylesheets="@loginSuccfull.css" AnchorPane.bottomAnchor="258.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+                                      <columns>
+                                        <TableColumn fx:id="order_co_orderID" prefWidth="70.0" text="Oder ID" />
+                                        <TableColumn fx:id="order_co_Type" prefWidth="60.0" text="Type" />
+                                          <TableColumn fx:id="order_co_Service" prefWidth="60.0" text="Service" />
+                                          <TableColumn fx:id="order_co_Qty" prefWidth="60.0" text="Qty" />
+                                          <TableColumn fx:id="order_co_Price" prefWidth="60.0" text="Price" />
+                                      </columns>
+                                       <styleClass>
+                                          <String fx:value="white-from" />
+                                          <String fx:value="shadow" />
+                                          <String fx:value="table-view-column-header" />
+                                       </styleClass>
+                                    </TableView>
+                                    <Label layoutX="93.0" layoutY="382.0" text="Total :" AnchorPane.bottomAnchor="158.0">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="order_total" layoutX="140.0" layoutY="382.0" prefHeight="22.0" prefWidth="98.0" text="TK 0.0" AnchorPane.bottomAnchor="157.0">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="72.0" layoutY="413.0" text="Amount :" AnchorPane.bottomAnchor="130.0">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="70.0" layoutY="448.0" prefHeight="22.0" prefWidth="65.0" text="Change :" AnchorPane.bottomAnchor="100.0">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="order_change" layoutX="140.0" layoutY="448.0" prefHeight="22.0" prefWidth="98.0" text="TK 0.0" AnchorPane.bottomAnchor="100.0">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="order_amount" layoutX="134.0" layoutY="411.0" onAction="#orderAmount" promptText="TK 0.0" styleClass="white-from" stylesheets="@loginSuccfull.css" AnchorPane.bottomAnchor="130.0" />
+                                    <Button fx:id="order_payBtn" layoutX="64.0" layoutY="479.0" mnemonicParsing="false" onAction="#orderPayBtn" prefHeight="30.0" prefWidth="250.0" stylesheets="@loginSuccfull.css" text="Pay" textFill="#63e15c" AnchorPane.bottomAnchor="60.0" AnchorPane.leftAnchor="40.0" AnchorPane.rightAnchor="40.0">
+                                       <styleClass>
+                                          <String fx:value="radius" />
+                                          <String fx:value="btnPay" />
+                                          <String fx:value="btnPay" />
+                                       </styleClass>
+                                    </Button>
+                                    <Button fx:id="order_removeBtn" layoutX="39.0" layoutY="524.0" mnemonicParsing="false" onAction="#orderRemoveBtn" prefHeight="30.0" prefWidth="107.0" stylesheets="@loginSuccfull.css" text="Remove" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="39.0">
+                                       <styleClass>
+                                          <String fx:value="radius" />
+                                          <String fx:value="btnPay" />
+                                          <String fx:value="btnPay" />
+                                       </styleClass>
+                                    </Button>
+                                    <Button fx:id="order_receiptBtn" layoutX="210.0" layoutY="525.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="107.0" stylesheets="@loginSuccfull.css" text="Receipt" AnchorPane.bottomAnchor="15.0" AnchorPane.rightAnchor="40.0">
+                                       <styleClass>
+                                          <String fx:value="radius" />
+                                          <String fx:value="btnPay" />
+                                          <String fx:value="btnPay" />
+                                       </styleClass>
+                                    </Button>
+                                    <Label layoutX="29.0" layoutY="371.0" text="Date of PickUp: " AnchorPane.bottomAnchor="187.39999999999998" AnchorPane.leftAnchor="29.0">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <DatePicker fx:id="order_dateP" layoutX="136.0" layoutY="369.0" AnchorPane.bottomAnchor="185.39999999999998" AnchorPane.leftAnchor="136.0" AnchorPane.rightAnchor="23.19999999999999" />
+                                    <Button fx:id="order_refreshBtn" layoutX="139.0" layoutY="332.0" mnemonicParsing="false" onAction="#orderRefreshBtn" stylesheets="@loginSuccfull.css" text="Refresh" AnchorPane.bottomAnchor="216.0">
+                                       <styleClass>
+                                          <String fx:value="logout-btn" />
+                                          <String fx:value="nav-btn" />
+                                          <String fx:value="shadow" />
+                                          <String fx:value="top-card" />
+                                          <String fx:value="radius" />
+                                       </styleClass>
+                                    </Button>
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="service_form" layoutX="10.0" layoutY="10.0" prefHeight="600.0" prefWidth="849.6" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <AnchorPane fx:id="service_form_2" layoutX="137.0" layoutY="42.0" prefHeight="600.0" prefWidth="849.6" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <children>
+                                    <AnchorPane layoutX="11.0" layoutY="14.0" prefHeight="274.0" prefWidth="827.0" stylesheets="@loginSuccfull.css" AnchorPane.bottomAnchor="310.0" AnchorPane.leftAnchor="11.0" AnchorPane.rightAnchor="12.0" AnchorPane.topAnchor="14.0">
+                                       <styleClass>
+                                          <String fx:value="white-from" />
+                                          <String fx:value="radius" />
+                                          <String fx:value="shadow" />
+                                       </styleClass>
+                                       <children>
+                                          <AnchorPane layoutX="14.0" prefHeight="47.0" prefWidth="817.0" styleClass="top-card" stylesheets="@loginSuccfull.css" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0">
+                                             <children>
+                                                <Label layoutX="61.0" layoutY="6.0" prefHeight="34.0" prefWidth="242.0" stylesheets="@loginSuccfull.css" text="Table For Service List" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="6.0">
+                                                   <font>
+                                                      <Font size="16.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </AnchorPane>
+                                          <TableView fx:id="service_tableView" layoutX="7.0" layoutY="62.0" onMouseClicked="#serviceSelectData" prefHeight="210.0" prefWidth="807.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="60.0">
+                                            <columns>
+                                              <TableColumn fx:id="service_co_id" prefWidth="140.0" text="               ID" />
+                                              <TableColumn fx:id="service_co_clothType" prefWidth="140.0" text="            Cloth Type" />
+                                                <TableColumn fx:id="service_co_services" prefWidth="130.0" text="          Services" />
+                                                <TableColumn fx:id="service_co_priceperKilo_ppk" prefWidth="100.0" text="  Price Per Kilo" />
+                                                <TableColumn fx:id="service_co_DI_dateinserted" prefWidth="150.0" text="        Date Inserted" />
+                                                <TableColumn fx:id="service_co_DU_dateUpdate" prefWidth="150.0" text="        Date Update" />
+                                            </columns>
+                                             <columnResizePolicy>
+                                                <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                             </columnResizePolicy>
+                                          </TableView>
+                                       </children>
+                                    </AnchorPane>
+                                    <AnchorPane layoutX="14.0" layoutY="309.0" prefHeight="274.0" prefWidth="825.0" stylesheets="@loginSuccfull.css" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="15.0">
+                                       <styleClass>
+                                          <String fx:value="white-from" />
+                                          <String fx:value="radius" />
+                                          <String fx:value="shadow" />
+                                       </styleClass>
+                                       <children>
+                                          <AnchorPane layoutX="14.0" layoutY="14.0" prefHeight="47.0" prefWidth="817.0" styleClass="top-card" stylesheets="@loginSuccfull.css" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0">
+                                             <children>
+                                                <Label layoutX="61.0" layoutY="6.0" prefHeight="34.0" prefWidth="242.0" stylesheets="@loginSuccfull.css" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="6.0">
+                                                   <font>
+                                                      <Font size="16.0" />
+                                                   </font>
+                                                </Label>
+                                                <ComboBox fx:id="service_insertType" layoutX="299.0" layoutY="10.0" prefWidth="150.0" />
+                                             </children>
+                                          </AnchorPane>
+                                          <Label layoutX="89.0" layoutY="90.0" prefHeight="18.0" prefWidth="35.0" text="ID: " AnchorPane.leftAnchor="80.0" />
+                                          <Label layoutX="48.0" layoutY="145.0" prefHeight="18.0" prefWidth="82.0" text="Cloth Type:" AnchorPane.leftAnchor="50.0" />
+                                          <TextField fx:id="service_id" layoutX="115.0" layoutY="86.0" AnchorPane.bottomAnchor="162.79999999999998" AnchorPane.leftAnchor="115.0" />
+                                          <ComboBox fx:id="service_clothType" layoutX="130.0" layoutY="140.0" prefWidth="150.0" AnchorPane.bottomAnchor="106.39999999999998" AnchorPane.leftAnchor="130.0" />
+                                          <Label fx:id="service_service" layoutX="336.0" layoutY="90.0" prefHeight="18.0" prefWidth="82.0" text="Service" AnchorPane.leftAnchor="336.0" />
+                                          <ComboBox fx:id="service_servicetype" layoutX="418.0" layoutY="85.0" prefWidth="150.0" AnchorPane.bottomAnchor="161.39999999999998" AnchorPane.leftAnchor="418.0" />
+                                          <Label layoutX="323.0" layoutY="128.0" prefHeight="18.0" prefWidth="102.0" text="Price Per Kilo:" AnchorPane.leftAnchor="320.0" />
+                                          <TextField fx:id="service_PPK_pricePerKilo" layoutX="417.0" layoutY="124.0" AnchorPane.bottomAnchor="124.79999999999998" AnchorPane.leftAnchor="417.0" />
+                                          <AnchorPane layoutX="659.0" layoutY="63.0" prefHeight="156.0" prefWidth="145.0" stylesheets="@loginSuccfull.css" AnchorPane.bottomAnchor="50.0" AnchorPane.rightAnchor="20.0">
+                                             <styleClass>
+                                                <String fx:value="white-from" />
+                                                <String fx:value="shadow" />
+                                             </styleClass>
+                                             <children>
+                                                <ImageView fx:id="service_imageView" fitHeight="150.0" fitWidth="136.0" layoutX="5.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0" />
+                                             </children>
+                                          </AnchorPane>
+                                          <Button fx:id="service_importBtn" layoutX="706.0" layoutY="228.0" mnemonicParsing="false" onAction="#SeriviceImageImportBtn" stylesheets="@loginSuccfull.css" text="Import" AnchorPane.bottomAnchor="14.0" AnchorPane.rightAnchor="65.0">
+                                             <styleClass>
+                                                <String fx:value="radius" />
+                                                <String fx:value="btnPay" />
+                                             </styleClass>
+                                          </Button>
+                                          <Button fx:id="service_uodateBtn" layoutX="221.0" layoutY="213.0" mnemonicParsing="false" onAction="#serviceUpdateBtn" prefHeight="30.0" prefWidth="90.0" stylesheets="@loginSuccfull.css" text="Update" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="220.0">
+                                             <styleClass>
+                                                <String fx:value="radius" />
+                                                <String fx:value="btnPay" />
+                                             </styleClass>
+                                          </Button>
+                                          <Button fx:id="service_insertBtn" layoutX="70.0" layoutY="213.0" mnemonicParsing="false" onAction="#insertBtnAll" prefHeight="30.0" prefWidth="90.0" stylesheets="@loginSuccfull.css" text="Insert" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="90.0">
+                                             <styleClass>
+                                                <String fx:value="radius" />
+                                                <String fx:value="btnPay" />
+                                             </styleClass>
+                                          </Button>
+                                          <Button fx:id="service_clearBtn" layoutX="367.0" layoutY="213.0" mnemonicParsing="false" onAction="#serviceClearBtn" prefHeight="30.0" prefWidth="90.0" stylesheets="@loginSuccfull.css" text="Clear" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="350.0">
+                                             <styleClass>
+                                                <String fx:value="radius" />
+                                                <String fx:value="btnPay" />
+                                             </styleClass>
+                                          </Button>
+                                          <Button fx:id="service_deleteBtn" layoutX="503.0" layoutY="213.0" mnemonicParsing="false" onAction="#serviceDeleteBtn" prefHeight="30.0" prefWidth="90.0" stylesheets="@loginSuccfull.css" text="Delete" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="500.0">
+                                             <styleClass>
+                                                <String fx:value="radius" />
+                                                <String fx:value="btnPay" />
+                                             </styleClass>
+                                          </Button>
+                                       </children>
+                                    </AnchorPane>
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="customer_form" prefHeight="600.0" prefWidth="849.6" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <AnchorPane layoutX="122.0" layoutY="168.0" prefHeight="200.0" prefWidth="200.0" stylesheets="@loginSuccfull.css" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0">
+                                 <styleClass>
+                                    <String fx:value="white-from" />
+                                    <String fx:value="radius" />
+                                    <String fx:value="shadow" />
+                                 </styleClass>
+                                 <children>
+                                    <AnchorPane layoutX="49.0" layoutY="69.0" prefHeight="45.0" prefWidth="834.0" styleClass="top-card" AnchorPane.leftAnchor="3.0" AnchorPane.rightAnchor="3.0" AnchorPane.topAnchor="3.0">
+                                       <children>
+                                          <Label alignment="CENTER" layoutX="355.0" layoutY="7.0" text="Alumni" AnchorPane.leftAnchor="355.0" AnchorPane.rightAnchor="356.20000000000005">
+                                             <font>
+                                                <Font size="20.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </AnchorPane>
+                                    <ScrollPane fx:id="customer_scrollPane" layoutY="51.0" prefHeight="1000.0" prefWidth="834.0" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="55.0">
+                                       <content>
+                                          <GridPane fx:id="customer_gridPane" prefHeight="35.0" prefWidth="78.0">
+                                            <columnConstraints>
+                                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                            </columnConstraints>
+                                          </GridPane>
+                                       </content>
+                                    </ScrollPane>
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="faculty_form" layoutX="10.0" layoutY="10.0" prefHeight="600.0" prefWidth="849.6" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <AnchorPane prefHeight="580.0" prefWidth="490.0" stylesheets="@loginSuccfull.css" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+                                 <styleClass>
+                                    <String fx:value="white-from" />
+                                    <String fx:value="shadow" />
+                                    <String fx:value="radius" />
+                                 </styleClass>
+                                 <children>
+                                    <AnchorPane layoutX="14.0" prefHeight="67.0" prefWidth="464.0" styleClass="top-card" stylesheets="@loginSuccfull.css" AnchorPane.bottomAnchor="509.8" AnchorPane.leftAnchor="3.0" AnchorPane.rightAnchor="3.0" AnchorPane.topAnchor="3.0">
+                                       <children>
+                                          <Label layoutX="355.0" layoutY="21.0" prefHeight="34.0" prefWidth="182.0" text="Faculty Members" textFill="WHITE" AnchorPane.topAnchor="21.0">
+                                             <font>
+                                                <Font size="23.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </AnchorPane>
+                                    <ScrollPane fx:id="faculty_scrollbarr" layoutX="2.0" layoutY="73.0" prefHeight="504.0" prefWidth="727.0" styleClass="white-from" stylesheets="@loginSuccfull.css" AnchorPane.bottomAnchor="3.0" AnchorPane.leftAnchor="2.0" AnchorPane.rightAnchor="4.0" AnchorPane.topAnchor="73.0">
+                                       <content>
+                                          <GridPane fx:id="faculty_gridPane1" prefHeight="32.0" prefWidth="100.0">
+                                             <columnConstraints>
+                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                             </columnConstraints>
+                                          </GridPane>
+                                       </content>
+                                    </ScrollPane>
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane layoutX="531.0" layoutY="28.0" prefHeight="580.0" prefWidth="338.0" stylesheets="@loginSuccfull.css" visible="false" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+                                 <styleClass>
+                                    <String fx:value="shadow" />
+                                    <String fx:value="radius" />
+                                    <String fx:value="white-from" />
+                                 </styleClass>
+                                 <children>
+                                    <TableView fx:id="order_tableView1" layoutX="14.0" layoutY="14.0" onMouseClicked="#orderSelectOrder" prefHeight="312.0" prefWidth="318.0" style="-fx-background-color: white;" stylesheets="@loginSuccfull.css" visible="false" AnchorPane.bottomAnchor="258.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+                                       <columns>
+                                          <TableColumn fx:id="order_co_orderID1" prefWidth="70.0" text="Oder ID" />
+                                          <TableColumn fx:id="order_co_Type1" prefWidth="60.0" text="Type" />
+                                          <TableColumn fx:id="order_co_Service1" prefWidth="60.0" text="Service" />
+                                          <TableColumn fx:id="order_co_Qty1" prefWidth="60.0" text="Qty" />
+                                          <TableColumn fx:id="order_co_Price1" prefWidth="60.0" text="Price" />
+                                       </columns>
+                                       <styleClass>
+                                          <String fx:value="white-from" />
+                                          <String fx:value="shadow" />
+                                          <String fx:value="table-view-column-header" />
+                                       </styleClass>
+                                    </TableView>
+                                    <Label layoutX="93.0" layoutY="382.0" text="Total :" AnchorPane.bottomAnchor="158.0">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="order_total1" layoutX="140.0" layoutY="382.0" prefHeight="22.0" prefWidth="98.0" text="TK 0.0" AnchorPane.bottomAnchor="157.0">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="72.0" layoutY="413.0" text="Amount :" AnchorPane.bottomAnchor="130.0">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="70.0" layoutY="448.0" prefHeight="22.0" prefWidth="65.0" text="Change :" AnchorPane.bottomAnchor="100.0">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="order_change1" layoutX="140.0" layoutY="448.0" prefHeight="22.0" prefWidth="98.0" text="TK 0.0" AnchorPane.bottomAnchor="100.0">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="order_amount1" layoutX="134.0" layoutY="411.0" onAction="#orderAmount" promptText="TK 0.0" styleClass="white-from" stylesheets="@loginSuccfull.css" AnchorPane.bottomAnchor="130.0" />
+                                    <Button fx:id="order_payBtn1" layoutX="64.0" layoutY="479.0" mnemonicParsing="false" onAction="#orderPayBtn" prefHeight="30.0" prefWidth="250.0" stylesheets="@loginSuccfull.css" text="Pay" textFill="#63e15c" AnchorPane.bottomAnchor="60.0" AnchorPane.leftAnchor="40.0" AnchorPane.rightAnchor="40.0">
+                                       <styleClass>
+                                          <String fx:value="radius" />
+                                          <String fx:value="btnPay" />
+                                          <String fx:value="btnPay" />
+                                       </styleClass>
+                                    </Button>
+                                    <Button fx:id="order_removeBtn1" layoutX="39.0" layoutY="524.0" mnemonicParsing="false" onAction="#orderRemoveBtn" prefHeight="30.0" prefWidth="107.0" stylesheets="@loginSuccfull.css" text="Remove" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="39.0">
+                                       <styleClass>
+                                          <String fx:value="radius" />
+                                          <String fx:value="btnPay" />
+                                          <String fx:value="btnPay" />
+                                       </styleClass>
+                                    </Button>
+                                    <Button fx:id="order_receiptBtn1" layoutX="210.0" layoutY="525.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="107.0" stylesheets="@loginSuccfull.css" text="Receipt" AnchorPane.bottomAnchor="15.0" AnchorPane.rightAnchor="40.0">
+                                       <styleClass>
+                                          <String fx:value="radius" />
+                                          <String fx:value="btnPay" />
+                                          <String fx:value="btnPay" />
+                                       </styleClass>
+                                    </Button>
+                                    <Label layoutX="29.0" layoutY="371.0" text="Date of PickUp: " AnchorPane.bottomAnchor="187.39999999999998" AnchorPane.leftAnchor="29.0">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <DatePicker fx:id="order_dateP1" layoutX="136.0" layoutY="369.0" AnchorPane.bottomAnchor="185.39999999999998" AnchorPane.leftAnchor="136.0" AnchorPane.rightAnchor="23.19999999999999" />
+                                    <Button fx:id="order_refreshBtn1" layoutX="139.0" layoutY="332.0" mnemonicParsing="false" onAction="#orderRefreshBtn" stylesheets="@loginSuccfull.css" text="Refresh" AnchorPane.bottomAnchor="216.0">
+                                       <styleClass>
+                                          <String fx:value="logout-btn" />
+                                          <String fx:value="nav-btn" />
+                                          <String fx:value="shadow" />
+                                          <String fx:value="top-card" />
+                                          <String fx:value="radius" />
+                                       </styleClass>
+                                    </Button>
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="add_all_form" layoutX="10.0" layoutY="10.0" prefHeight="600.0" prefWidth="849.6" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <AnchorPane fx:id="after_admin_login_form" layoutX="137.0" layoutY="42.0" prefHeight="600.0" prefWidth="849.6" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <children>
+                                    <AnchorPane layoutX="11.0" layoutY="14.0" prefHeight="274.0" prefWidth="827.0" stylesheets="@loginSuccfull.css" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="11.0" AnchorPane.rightAnchor="12.0" AnchorPane.topAnchor="14.0">
+                                       <styleClass>
+                                          <String fx:value="white-from" />
+                                          <String fx:value="radius" />
+                                          <String fx:value="shadow" />
+                                       </styleClass>
+                                       <children>
+                                          <AnchorPane layoutX="14.0" prefHeight="47.0" prefWidth="817.0" styleClass="top-card" stylesheets="@loginSuccfull.css" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0">
+                                             <children>
+                                                <Label layoutX="355.0" layoutY="6.0" prefHeight="34.0" prefWidth="242.0" stylesheets="@loginSuccfull.css" text="Account Creation and Update" AnchorPane.leftAnchor="355.0" AnchorPane.topAnchor="6.0">
+                                                   <font>
+                                                      <Font size="16.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </AnchorPane>
+                                          <Button fx:id="after_admin_login_faculty" layoutX="30.0" layoutY="82.0" mnemonicParsing="false" onAction="#faculty_member_AddBtn" prefHeight="190.0" prefWidth="400.0" stylesheets="@loginSuccfull.css" text="Faculty member" AnchorPane.leftAnchor="26.0" AnchorPane.topAnchor="82.0">
+                                             <graphic>
+                                                <ImageView fitHeight="148.0" fitWidth="275.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../image/faculty.jpg" />
+                                                   </image>
+                                                </ImageView>
+                                             </graphic>
+                                             <font>
+                                                <Font name="ISOCT2_IV50" size="14.0" />
+                                             </font>
+                                             <styleClass>
+                                                <String fx:value="shadow" />
+                                                <String fx:value="dash-btn" />
+                                                <String fx:value="radius" />
+                                             </styleClass>
+                                          </Button>
+                                          <Button fx:id="after_admin_login_students" layoutX="26.0" layoutY="338.0" mnemonicParsing="false" onAction="#Student_AddBtn" prefHeight="218.0" prefWidth="400.0" stylesheets="@loginSuccfull.css" text="Students" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="26.0">
+                                             <graphic>
+                                                <ImageView fitHeight="163.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../image/studentAdd.png" />
+                                                   </image>
+                                                </ImageView>
+                                             </graphic>
+                                             <font>
+                                                <Font name="ISOCP2_IV50" size="15.0" />
+                                             </font>
+                                             <styleClass>
+                                                <String fx:value="dash-btn" />
+                                                <String fx:value="dash-btn" />
+                                                <String fx:value="shadow" />
+                                                <String fx:value="shadow" />
+                                                <String fx:value="radius" />
+                                             </styleClass>
+                                          </Button>
+                                          <Button fx:id="after_admin_login_alumni" layoutX="437.0" layoutY="82.0" mnemonicParsing="false" onAction="#Alumni_AddBtn" prefHeight="192.0" prefWidth="380.0" stylesheets="@loginSuccfull.css" text="Alumni" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="82.0">
+                                             <graphic>
+                                                <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../image/download%20(2).png" />
+                                                   </image>
+                                                </ImageView>
+                                             </graphic>
+                                             <font>
+                                                <Font name="ISOCP3_IV50" size="15.0" />
+                                             </font>
+                                             <styleClass>
+                                                <String fx:value="dash-btn" />
+                                                <String fx:value="dash-btn" />
+                                                <String fx:value="shadow" />
+                                                <String fx:value="radius" />
+                                             </styleClass>
+                                          </Button>
+                                          <Button layoutX="438.0" layoutY="336.0" mnemonicParsing="false" onAction="#updateAccount" prefHeight="218.0" prefWidth="380.0" stylesheets="@loginSuccfull.css" AnchorPane.bottomAnchor="30.0" AnchorPane.rightAnchor="10.0">
+                                             <graphic>
+                                                <ImageView fitHeight="155.0" fitWidth="213.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../image/up.jpeg" />
+                                                   </image>
+                                                </ImageView>
+                                             </graphic>
+                                             <styleClass>
+                                                <String fx:value="dash-btn" />
+                                                <String fx:value="dash-btn" />
+                                                <String fx:value="shadow" />
+                                                <String fx:value="radius" />
+                                             </styleClass>
+                                          </Button>
+                                       </children>
+                                    </AnchorPane>
+                                    <AnchorPane layoutX="14.0" layoutY="309.0" prefHeight="274.0" prefWidth="825.0" stylesheets="@loginSuccfull.css" visible="false" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="15.0">
+                                       <styleClass>
+                                          <String fx:value="white-from" />
+                                          <String fx:value="radius" />
+                                          <String fx:value="shadow" />
+                                       </styleClass>
+                                       <children>
+                                          <AnchorPane layoutX="14.0" layoutY="14.0" prefHeight="47.0" prefWidth="817.0" styleClass="top-card" stylesheets="@loginSuccfull.css" visible="false" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0">
+                                             <children>
+                                                <Label layoutX="61.0" layoutY="6.0" prefHeight="34.0" prefWidth="242.0" stylesheets="@loginSuccfull.css" text="New Admin Account" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="6.0">
+                                                   <font>
+                                                      <Font size="16.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </AnchorPane>
+                                          <Label layoutX="89.0" layoutY="90.0" prefHeight="18.0" prefWidth="35.0" text="ID: " AnchorPane.leftAnchor="80.0" />
+                                          <Label layoutX="48.0" layoutY="145.0" prefHeight="18.0" prefWidth="82.0" text="Cloth Type:" AnchorPane.leftAnchor="50.0" />
+                                          <TextField fx:id="service_id1" layoutX="115.0" layoutY="86.0" AnchorPane.bottomAnchor="162.79999999999998" AnchorPane.leftAnchor="115.0" />
+                                          <ComboBox fx:id="service_clothType1" layoutX="130.0" layoutY="140.0" prefWidth="150.0" AnchorPane.bottomAnchor="106.39999999999998" AnchorPane.leftAnchor="130.0" />
+                                          <Label fx:id="service_service1" layoutX="336.0" layoutY="90.0" prefHeight="18.0" prefWidth="82.0" text="Service" AnchorPane.leftAnchor="336.0" />
+                                          <ComboBox fx:id="service_servicetype1" layoutX="418.0" layoutY="85.0" prefWidth="150.0" AnchorPane.bottomAnchor="161.39999999999998" AnchorPane.leftAnchor="418.0" />
+                                          <Label layoutX="323.0" layoutY="128.0" prefHeight="18.0" prefWidth="102.0" text="Price Per Kilo:" AnchorPane.leftAnchor="320.0" />
+                                          <TextField fx:id="service_PPK_pricePerKilo1" layoutX="417.0" layoutY="124.0" AnchorPane.bottomAnchor="124.79999999999998" AnchorPane.leftAnchor="417.0" />
+                                          <AnchorPane layoutX="659.0" layoutY="63.0" prefHeight="156.0" prefWidth="145.0" stylesheets="@loginSuccfull.css" AnchorPane.bottomAnchor="50.0" AnchorPane.rightAnchor="20.0">
+                                             <styleClass>
+                                                <String fx:value="white-from" />
+                                                <String fx:value="shadow" />
+                                             </styleClass>
+                                             <children>
+                                                <ImageView fx:id="service_imageView1" fitHeight="150.0" fitWidth="136.0" layoutX="5.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0" />
+                                             </children>
+                                          </AnchorPane>
+                                          <Button fx:id="service_importBtn1" layoutX="706.0" layoutY="228.0" mnemonicParsing="false" onAction="#SeriviceImageImportBtn" stylesheets="@loginSuccfull.css" text="Import" AnchorPane.bottomAnchor="14.0" AnchorPane.rightAnchor="65.0">
+                                             <styleClass>
+                                                <String fx:value="radius" />
+                                                <String fx:value="btnPay" />
+                                             </styleClass>
+                                          </Button>
+                                          <Button fx:id="service_uodateBtn1" layoutX="221.0" layoutY="213.0" mnemonicParsing="false" onAction="#serviceUpdateBtn" prefHeight="30.0" prefWidth="90.0" stylesheets="@loginSuccfull.css" text="Update" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="220.0">
+                                             <styleClass>
+                                                <String fx:value="radius" />
+                                                <String fx:value="btnPay" />
+                                             </styleClass>
+                                          </Button>
+                                          <Button fx:id="service_insertBtn1" layoutX="70.0" layoutY="213.0" mnemonicParsing="false" onAction="#insertBtnAll" prefHeight="30.0" prefWidth="90.0" stylesheets="@loginSuccfull.css" text="Insert" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="90.0">
+                                             <styleClass>
+                                                <String fx:value="radius" />
+                                                <String fx:value="btnPay" />
+                                             </styleClass>
+                                          </Button>
+                                          <Button fx:id="service_clearBtn1" layoutX="367.0" layoutY="213.0" mnemonicParsing="false" onAction="#serviceClearBtn" prefHeight="30.0" prefWidth="90.0" stylesheets="@loginSuccfull.css" text="Clear" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="350.0">
+                                             <styleClass>
+                                                <String fx:value="radius" />
+                                                <String fx:value="btnPay" />
+                                             </styleClass>
+                                          </Button>
+                                          <Button fx:id="service_deleteBtn1" layoutX="503.0" layoutY="213.0" mnemonicParsing="false" onAction="#serviceDeleteBtn" prefHeight="30.0" prefWidth="90.0" stylesheets="@loginSuccfull.css" text="Delete" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="500.0">
+                                             <styleClass>
+                                                <String fx:value="radius" />
+                                                <String fx:value="btnPay" />
+                                             </styleClass>
+                                          </Button>
+                                       </children>
+                                    </AnchorPane>
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="all_registration_form2" focusTraversable="true" layoutX="10.0" layoutY="10.0" prefHeight="600.0" prefWidth="849.6" stylesheets="@cardDesign.css" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <AnchorPane fx:id="co" layoutX="-11.0" layoutY="-14.0" prefHeight="600.0" prefWidth="861.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <children>
+                                    <AnchorPane fx:id="syllabus_1_1_form" focusTraversable="true" layoutX="10.0" layoutY="61.0" prefHeight="244.0" prefWidth="795.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="50.0">
+                                       <children>
+                                          <TableView fx:id="syllabus_1_1_tableView" prefHeight="600.0" prefWidth="849.6" stylesheets="@loginSuccfull.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                            <columns>
+                                              <TableColumn fx:id="syllabus_1_1_sl" prefWidth="82.39999198913574" text="SL" />
+                                              <TableColumn fx:id="syllabus_1_1_courseCode" prefWidth="113.60001373291016" text="Couser Code" />
+                                                <TableColumn fx:id="syllabus_1_1_tittle" prefWidth="362.3999328613281" text="Tittle" />
+                                                <TableColumn fx:id="syllabus_1_1_credit" prefWidth="83.20001220703125" text="Credit" />
+                                                <TableColumn fx:id="syllabus_1_1_preResuist" prefWidth="207.99993896484375" text="Pre-Requiste" />
+                                            </columns>
+                                             <styleClass>
+                                                <String fx:value="white-from" />
+                                                <String fx:value="radius" />
+                                             </styleClass>
+                                          </TableView>
+                                       </children>
+                                       <stylesheets>
+                                          <URL value="@cardDesign.css" />
+                                          <URL value="@new.css" />
+                                          <URL value="@loginSuccfull.css" />
+                                       </stylesheets>
+                                       <styleClass>
+                                          <String fx:value="shadow" />
+                                          <String fx:value="white-from" />
+                                          <String fx:value="radius" />
+                                       </styleClass>
+                                    </AnchorPane>
+                                    <AnchorPane fx:id="syllabus_1_2_form" focusTraversable="true" layoutX="14.0" layoutY="331.0" prefHeight="275.0" prefWidth="850.0" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0">
+                                       <children>
+                                          <TableView fx:id="syllabus_1_2_tableView" prefHeight="600.0" prefWidth="849.6" stylesheets="@loginSuccfull.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                             <columns>
+                                                <TableColumn fx:id="syllabus_1_2_sl" prefWidth="82.39999198913574" text="SL" />
+                                                <TableColumn fx:id="syllabus_1_2_courseCode" prefWidth="113.60001373291016" text="Couser Code" />
+                                                <TableColumn fx:id="syllabus_1_2_tittle" prefWidth="362.3999328613281" text="Tittle" />
+                                                <TableColumn fx:id="syllabus_1_2_credit" prefWidth="83.20001220703125" text="Credit" />
+                                                <TableColumn fx:id="syllabus_1_2_preResuist" prefWidth="207.99993896484375" text="Pre-Requiste" />
+                                             </columns>
+                                             <styleClass>
+                                                <String fx:value="white-from" />
+                                                <String fx:value="radius" />
+                                             </styleClass>
+                                          </TableView>
+                                       </children>
+                                       <stylesheets>
+                                          <URL value="@cardDesign.css" />
+                                          <URL value="@new.css" />
+                                          <URL value="@loginSuccfull.css" />
+                                       </stylesheets>
+                                       <styleClass>
+                                          <String fx:value="shadow" />
+                                          <String fx:value="white-from" />
+                                          <String fx:value="radius" />
+                                       </styleClass>
+                                    </AnchorPane>
+                                    <AnchorPane layoutX="14.0" layoutY="-86.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                       <children>
+                                          <Label layoutX="356.0" layoutY="19.0" prefHeight="18.0" prefWidth="159.0" text="Fast Year First Term" AnchorPane.leftAnchor="356.0" AnchorPane.rightAnchor="346.0" />
+                                          <AnchorPane layoutY="286.0" prefHeight="47.0" prefWidth="861.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                                             <children>
+                                                <Label layoutX="356.0" layoutY="19.0" prefHeight="18.0" prefWidth="159.0" text="Fast Year SecondTerm" AnchorPane.leftAnchor="356.0" AnchorPane.rightAnchor="346.0" />
+                                             </children>
+                                          </AnchorPane>
+                                       </children>
+                                    </AnchorPane>
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="verify_admin_form" layoutX="20.0" layoutY="20.0" prefHeight="600.0" prefWidth="849.6" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <AnchorPane layoutX="325.0" layoutY="46.0" prefHeight="600.0" prefWidth="849.6" style="-fx-background-color: white;" stylesheets="@loginSuccfull.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <children>
+                                    <TextField fx:id="service_adminUser" layoutX="226.0" layoutY="222.0" prefHeight="26.0" prefWidth="375.0" promptText="Enter an Admin Id" />
+                                    <PasswordField fx:id="service_adminPass" layoutX="226.0" layoutY="300.0" prefHeight="26.0" prefWidth="375.0" promptText="Enter password" />
+                                    <Button fx:id="service_adminComformBtn" layoutX="388.0" layoutY="364.0" mnemonicParsing="false" onAction="#ServiceVerfiyAdmin" stylesheets="@loginSuccfull.css" text="Conformation">
+                                       <styleClass>
+                                          <String fx:value="btnPay" />
+                                          <String fx:value="shadow" />
+                                          <String fx:value="nav" />
+                                       </styleClass>
+                                    </Button>
+                                    <Button layoutX="373.0" layoutY="541.0" mnemonicParsing="false" onAction="#create_an_admin" prefHeight="32.0" prefWidth="138.0" text="Create An Account">
+                                       <styleClass>
+                                          <String fx:value="shadow" />
+                                          <String fx:value="white-from" />
+                                          <String fx:value="textfile" />
+                                       </styleClass>
+                                    </Button>
+                                    <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="338.0" layoutY="36.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../image/admin.jpg" />
+                                       </image>
+                                    </ImageView>
+                                    <ImageView fitHeight="110.0" fitWidth="87.0" layoutX="468.0" layoutY="99.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../image/all.jpg" />
+                                       </image>
+                                    </ImageView>
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="Dashboard_form" prefHeight="590.0" prefWidth="846.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <AnchorPane layoutX="45.0" layoutY="14.0" prefHeight="180.0" prefWidth="840.0" stylesheets="@loginSuccfull.css" AnchorPane.leftAnchor="9.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <styleClass>
+                                    <String fx:value="white-from" />
+                                    <String fx:value="radius" />
+                                    <String fx:value="shadow" />
+                                 </styleClass>
+                                 <children>
+                                    <ScrollPane layoutX="-1.0" prefHeight="180.0" prefWidth="1000.0" styleClass="radius" stylesheets="@loginSuccfull.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                       <content>
+                                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="1200.0">
+                                             <children>
+                                                <AnchorPane layoutX="14.0" layoutY="5.0" prefHeight="150.0" prefWidth="250.0" stylesheets="@loginSuccfull.css" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="5.0">
+                                                   <children>
+                                                      <Label fx:id="dashboard_customerN" layoutX="151.0" layoutY="95.0" prefHeight="32.0" prefWidth="60.0" text="0" textFill="#09090d">
+                                                         <font>
+                                                            <Font size="17.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label layoutX="26.0" layoutY="5.0" prefHeight="46.0" prefWidth="198.0" text="Faculty Member's" textFill="#cdcfdf">
+                                                         <font>
+                                                            <Font name="Centaur" size="29.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <ImageView fitHeight="87.0" fitWidth="91.0" layoutX="34.0" layoutY="52.0" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@../image/faculty.jpg" />
+                                                         </image>
+                                                         <styleClass>
+                                                            <String fx:value="shadow" />
+                                                            <String fx:value="radius" />
+                                                         </styleClass>
+                                                      </ImageView>
+                                                   </children>
+                                                   <styleClass>
+                                                      <String fx:value="top-card" />
+                                                      <String fx:value="radius" />
+                                                   </styleClass>
+                                                </AnchorPane>
+                                                <AnchorPane layoutX="272.0" layoutY="35.0" prefHeight="150.0" prefWidth="250.0" stylesheets="@loginSuccfull.css" AnchorPane.leftAnchor="270.0" AnchorPane.topAnchor="5.0">
+                                                   <styleClass>
+                                                      <String fx:value="top-card" />
+                                                      <String fx:value="radius" />
+                                                   </styleClass>
+                                                   <children>
+                                                      <Label layoutX="12.0" prefHeight="50.0" prefWidth="225.0" text="Total Student's" textFill="#e7e2e2">
+                                                         <font>
+                                                            <Font name="Centaur" size="29.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label fx:id="dashboard_Todayi" layoutX="136.0" layoutY="92.0" prefHeight="32.0" prefWidth="66.0" text="0" textFill="#09090d">
+                                                         <font>
+                                                            <Font size="17.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <ImageView fitHeight="72.0" fitWidth="80.0" layoutX="38.0" layoutY="64.0" pickOnBounds="true" preserveRatio="true" styleClass="shadow">
+                                                         <image>
+                                                            <Image url="@../image/studentAdd.png" />
+                                                         </image>
+                                                      </ImageView>
+                                                   </children>
+                                                </AnchorPane>
+                                                <AnchorPane layoutX="555.0" layoutY="5.0" prefHeight="150.0" prefWidth="251.0" stylesheets="@loginSuccfull.css" AnchorPane.leftAnchor="530.0" AnchorPane.topAnchor="5.0">
+                                                   <styleClass>
+                                                      <String fx:value="top-card" />
+                                                      <String fx:value="radius" />
+                                                   </styleClass>
+                                                   <children>
+                                                      <Label layoutX="22.0" prefHeight="50.0" prefWidth="185.0" text="Toatal Alumni's" textFill="#dcdde1">
+                                                         <font>
+                                                            <Font name="Centaur" size="29.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label fx:id="dashboard_Totalincome" layoutX="187.0" layoutY="92.0" prefHeight="32.0" prefWidth="42.0" text="0" textFill="#09090d">
+                                                         <font>
+                                                            <Font size="17.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <ImageView fitHeight="91.0" fitWidth="143.0" layoutX="28.0" layoutY="64.0" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@../image/ali.jpeg" />
+                                                         </image>
+                                                         <styleClass>
+                                                            <String fx:value="radius" />
+                                                            <String fx:value="shadow" />
+                                                         </styleClass>
+                                                      </ImageView>
+                                                   </children>
+                                                </AnchorPane>
+                                             </children>
+                                          </AnchorPane>
+                                       </content>
+                                    </ScrollPane>
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane layoutX="9.0" layoutY="202.0" prefHeight="404.0" prefWidth="840.0" stylesheets="@loginSuccfull.css" AnchorPane.bottomAnchor="7.0" AnchorPane.leftAnchor="9.0" AnchorPane.rightAnchor="9.0" AnchorPane.topAnchor="202.0">
+                                 <styleClass>
+                                    <String fx:value="white-from" />
+                                    <String fx:value="shadow" />
+                                    <String fx:value="radius" />
+                                 </styleClass>
+                                 <children>
+                                    <Label layoutX="323.0" layoutY="14.0" prefHeight="31.0" prefWidth="186.0" text="Campus Recruiter" AnchorPane.leftAnchor="323.0" AnchorPane.rightAnchor="311.0">
+                                       <font>
+                                          <Font name="System Bold" size="21.0" />
+                                       </font>
+                                    </Label>
+                                    <ListView fx:id="jobListView" layoutX="75.0" layoutY="63.0" prefHeight="307.0" prefWidth="696.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="50.0">
+                                       <styleClass>
+                                          <String fx:value="white-from" />
+                                          <String fx:value="radius" />
+                                          <String fx:value="shadow" />
+                                       </styleClass>
+                                    </ListView>
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+               </center>
+            </BorderPane>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

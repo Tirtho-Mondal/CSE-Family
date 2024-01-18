@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.freshthreads.HelloController">
+   <children>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <AnchorPane fx:id="su_form" prefHeight="400.0" prefWidth="300.0" style="-fx-background-color: white;">
+               <children>
+                  <TextField fx:id="su_email" layoutX="34.0" layoutY="121.0" prefHeight="26.0" prefWidth="214.0" promptText="Email" />
+                  <PasswordField fx:id="su_conf_pass" layoutX="34.0" layoutY="268.0" prefHeight="26.0" prefWidth="214.0" promptText="Confirm Password" />
+                  <Label layoutX="34.0" layoutY="27.0" prefHeight="26.0" prefWidth="177.0" styleClass="head-label" stylesheets="@new.css" text="Registration Account" textFill="#7e7d33">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="subutton" layoutX="63.0" layoutY="350.0" mnemonicParsing="false" onAction="#Register_func" prefHeight="26.0" prefWidth="156.0" styleClass="login-btn" stylesheets="@new.css" text="SignUp" textFill="WHITE" />
+                  <TextField fx:id="su_user" layoutX="34.0" layoutY="72.0" prefHeight="26.0" prefWidth="214.0" promptText="User Name" />
+                  <PasswordField fx:id="su_pass" layoutX="34.0" layoutY="222.0" prefHeight="26.0" prefWidth="214.0" promptText="Enter Password" />
+                  <Label fx:id="not_match_pass" layoutX="102.0" layoutY="249.0" prefHeight="18.0" prefWidth="145.0" textFill="#ef0505" />
+                  <Label fx:id="successfulmessage" alignment="CENTER" layoutX="25.0" layoutY="310.0" prefHeight="27.0" prefWidth="249.0" textFill="#10ecd6">
+                     <font>
+                        <Font name="Italic_IV50" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="InvalidUser" layoutX="89.0" layoutY="63.0" prefHeight="18.0" prefWidth="156.0" textFill="#d10c0c" />
+                  <TextField fx:id="su_location" layoutX="34.0" layoutY="173.0" prefHeight="26.0" prefWidth="214.0" promptText="Location(city)" />
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="300.0" prefHeight="400.0" prefWidth="300.0" style="-fx-background-color: white;">
+               <children>
+
+                        <TextField fx:id="si_user" layoutX="20.0" layoutY="224.0" prefHeight="26.0" prefWidth="214.0" promptText="Name" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" />
+                  <PasswordField fx:id="si_pass" layoutX="20.0" layoutY="273.0" prefHeight="26.0" prefWidth="258.0" promptText="Password" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" />
+                  <Label layoutX="90.0" layoutY="131.0" styleClass="head-label" stylesheets="@new.css" text="Login Account" textFill="#7e7d33">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="singin" layoutX="72.0" layoutY="325.0" mnemonicParsing="false" onAction="#SignIn" prefHeight="26.0" prefWidth="156.0" styleClass="login-btn" stylesheets="@new.css" text="SigIn" textFill="WHITE" />
+                  <Label fx:id="message" layoutX="136.0" layoutY="324.0" />
+                  <ComboBox fx:id="si_accountType" layoutX="129.0" layoutY="177.0" prefHeight="26.0" prefWidth="260.0" promptText="Account Type" AnchorPane.rightAnchor="21.0" />
+                  <Label layoutX="20.0" layoutY="176.0" prefHeight="27.0" prefWidth="104.0" styleClass="shadow" stylesheets="@loginSuccfull.css">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="90.0" fitWidth="90.0" layoutX="105.0" layoutY="43.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/login1.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="sidefrom" prefHeight="400.0" prefWidth="300.0" styleClass="gradient" stylesheets="@new.css">
+               <children>
+                  <AnchorPane layoutX="72.0" layoutY="36.0" prefHeight="400.0" prefWidth="300.0" styleClass="main-card" stylesheets="@loginSuccfull.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <Label layoutX="67.0" layoutY="30.0" prefHeight="63.0" prefWidth="178.0" text="CSE Family" textFill="#0763dbe9">
+                           <font>
+                              <Font name="Baskerville Old Face" size="36.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="side_already" layoutX="73.0" layoutY="370.0" mnemonicParsing="false" onAction="#switchFrom" prefHeight="26.0" prefWidth="156.0" styleClass="createAc-btn" stylesheets="@new.css" text="Already have an Account" />
+                        <Button fx:id="side_createbutton" layoutX="73.0" layoutY="370.0" mnemonicParsing="false" onAction="#switchFrom" prefHeight="26.0" prefWidth="156.0" styleClass="createAc-btn" stylesheets="@new.css" text="Create New Account" />
+                        <ImageView fitHeight="197.0" fitWidth="337.0" layoutX="1.0" layoutY="108.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../image/cse.jpg" />
+                           </image></ImageView>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

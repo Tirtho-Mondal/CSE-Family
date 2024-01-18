@@ -1,0 +1,72 @@
+
+.gradient
+{
+    -fx-background-color: Linear-gradient(to bottom right,#33cc42,#b96838);
+}
+
+.head-label
+{
+       -fx-border-color: #286155;
+       -fx-border-width: 0 0 0 5px;
+       -fx-padding: 0 0 0 5px;
+
+}
+
+.login-btn
+{
+    -fx-background-color: Linear-gradient(to bottom right,#285996,#4b83c7);
+    -fx-background-radius: 5px;
+    -fx-cursor: hand;
+
+}
+
+.create-btn
+{
+    -fx-background-color: transparent;
+     -fx-background-radius: 5px;
+       -fx-cursor: hand;
+       -fx-border-color: #fff;
+       -fx-border-width: 1px;
+}
+
+.proceed-btn
+{
+-fx-background-color: Linear-gradient(to bottom right,#c7a623,#715c10);
+    //-fx-background-color: #c7a623;
+     -fx-background-radius: 100;
+       -fx-cursor: hand;
+}
+
+.forgotten-Pas
+{
+    -fx-background-color: transparent;
+    -fx-cursor:hand;
+
+}
+
+.course-btn
+{
+
+    -fx-background-color: Linear-gradient(to bottom right,#c7a623,#715c10);
+     -fx-cursor: hand;
+     -fx-background-radius: 100;
+}
+
+.createAc-btn:focus {
+    -fx-background-color: #fff;
+    -fx-text-fill: #000;
+}
+
+
+.course-btn
+{
+
+    -fx-background-color: Linear-gradient(to bottom right,#c7a623,#715c10);
+     -fx-cursor: hand;
+     -fx-background-radius: 100;
+}
+.course-btn:hover
+{
+                -fx-background-color: Linear-gradient(to bottom right,#285996,#4b83c7);
+                -fx-text-fill: #000;
+}

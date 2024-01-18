@@ -1,0 +1,139 @@
+
+.nav
+{
+    -fx-background-color: Linear-gradient (to bottom right, #4694bb,#2a5178);
+
+}
+.header
+{
+    -fx-background-color: #4694bb;
+    -fx-border-width: 0 0 2px 0;
+    -fx-border-color:#fff;
+}
+.gradient
+{
+    -fx-background-color: Linear-gradient(to bottom right,#33cc42,#b96838);
+}
+
+.nav-btn
+{
+    -fx-background-color: transparent;
+    -fx-border-color: #fff;
+    -fx-text-fill: #fff;
+    -fx-cursor: hand;
+    -fx-radius: 80;
+
+}
+.nav-btn:hover
+{
+    -fx-background-color: #fff;
+    -fx-text-fill: #000;
+}
+
+
+.dash-btn
+{
+    -fx-background-color: white;
+    -fx-border-color: #transparent;
+    -fx-text-fill: #000;
+    -fx-cursor: hand;
+    -fx-radius: 150;
+
+}
+.dash-btn:hover
+{
+    -fx-background-color: #fff;
+    -fx-text-fill: #000;
+}
+
+
+
+.logout-btn
+{
+    -fx-background-color: transparent;
+}
+.logout-btn:hover
+{
+    -fx-background-color: #fff;
+    -fx-text-fill: #000;
+}
+
+.white-from
+{
+    -fx-background-color: #fff;
+}
+.radius
+{
+    -fx-background-radius: 8px;
+}
+.shadow {
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,5),5,0,0,0);
+}
+
+.table-view
+{
+    -fx-background-color: transparent;
+
+    -fx-border-width: 1.5px;
+    -fx-border-radius: 8px;
+    -fx-padding: 0px;
+}
+
+.textfile
+{
+-fx-text-fill:#c41414;
+}
+
+.table-view. column-header-background
+{
+ -fx-background-color:Linear-gradient(to bottom right,#33cc42,#b96838);
+
+    -fx-background-insets: 0,0,0,0;
+    -fx-background-radius: 8px 8px 0 0;
+}
+.table-view. column-header.filter
+{
+    -fx-background-color: transparent;
+    -fx-size: 40px;
+}
+.table-view-column-header.label
+{
+    -fx-text-fill: #fff;
+}
+
+.btnPay
+{
+    -fx-background-color: Linear-gradient(to bottom right,#4694bb,#2a5178);
+    -fx-text-fill: #fff;
+    -fx-font-size: 14px;
+    -fx-font-family: Arial;
+    -fx-cursor: hand;
+    -fx-radius: 70;
+}
+
+.btnPay:hover
+{
+    -fx-background-color: Linear-gradient(to bottom right,#33cc42,#b96838);
+    -fx-text-fill: #000;
+}
+
+.top-card
+{
+     -fx-background-color: Linear-gradient(to bottom right,#4694bb,#2a5178);
+     -fx-background-radius: 8px 8px 0 0;
+     -fx-text-fill: #fff;
+}
+
+
+.main-card
+{
+     -fx-background-color: Linear-gradient(to bottom right,#000000,#0b2148);
+     -fx-background-radius: 8px 8px 0 0;
+     -fx-text-fill: #fff;
+}
+
+
+.scroll-pane
+{
+    -fx-background-color:transparent;
+}
